@@ -1,0 +1,24 @@
+{
+  "name": "lit-todo-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup --config",
+    "dev": "es-dev-server --node-resolve --watch",
+    "start": "npm run build && serve -l 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lit-element": "^2.4.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "es-dev-server": "^2.1.0",
+    "rollup": "^2.44.0",
+    "serve": "^11.3.2"
+  }
+}
