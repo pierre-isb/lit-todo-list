@@ -1,6 +1,5 @@
 import { html, css } from "lit"
 import { customElement, property, state } from "lit/decorators.js"
-import { repeat } from "lit-html/directives/repeat.js"
 import Item from "../types/Item.types"
 
 import LitComponent from "./Mixins/LitComponent"
@@ -17,7 +16,7 @@ export default class App extends LitComponent {
   lastUnusedId = 0
   todoList: Item[] = []
 
-  addItem(e) {
+  addItem(e: CustomEvent) {
     const text = this.$getMessage(e)
     this.todoList = [
       ...this.todoList,
@@ -26,20 +25,20 @@ export default class App extends LitComponent {
     this.lastUnusedId++
   }
 
-  editItem(e) {
+  editItem(e: CustomEvent) {
     const newItem = this.$getMessage(e)
     this.todoList = this.todoList.filter((item) => item.id !== newItem.id)
     this.todoList = [...this.todoList, newItem].sort(this._sortById)
     this.requestUpdate()
   }
 
-  deleteItem(e) {
+  deleteItem(e: CustomEvent) {
     const id = this.$getMessage(e)
     this.todoList = this.todoList.filter((item) => item.id !== id)
     this.requestUpdate()
   }
 
-  todoListItem(item) {
+  todoListItem(item: Item) {
     return html`<li>
       <todo-item
         @edit=${this.editItem}
