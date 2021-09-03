@@ -40,9 +40,9 @@ Locally at: http://localhost:3000/
 
 You can configure the design of your Todo List by setting the css variables in the `styles.css`
 
-- `--color-primary`: main color theme for your todo list - default: `#`
-- `--color-complementary`: complementary color - default: `#`
-- `--color-secondary`: mainly used for the background - default: `#00072f`
+- `--color-primary`: main color theme for your todo list - default: `red`
+- `--color-complementary`: complementary color - default: `white`
+- `--color-secondary`: mainly used for the background - default: `black`
 
 You can also define a custom font in the `styles.css`
 And you can set a custom title by setting the `title` property of the webcomponent
