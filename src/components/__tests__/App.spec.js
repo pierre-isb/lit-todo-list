@@ -55,5 +55,37 @@ describe("App", () => {
         expect(todoItem.item).to.eql({ id: 0, text: "toto", checked: false })
       })
     })
+    describe("@edit", () => {
+      beforeEach(async () => {
+        const input = app.shadowRoot.querySelector("todo-input")
+        await fireEvent(input, "add", "toto")
+        const listItem = app.shadowRoot.querySelector("todo-item")
+        await fireEvent(listItem, "edit", {
+          id: 0,
+          text: "titi",
+          checked: true,
+        })
+      })
+      it("the todo-item has now the new item in its property", () => {
+        const todoItem = app.shadowRoot.querySelector("todo-item")
+        expect(todoItem.item).to.eql({
+          id: 0,
+          text: "titi",
+          checked: true,
+        })
+      })
+    })
+    describe("@delete", () => {
+      beforeEach(async () => {
+        const input = app.shadowRoot.querySelector("todo-input")
+        await fireEvent(input, "add", "toto")
+        const listItem = app.shadowRoot.querySelector("todo-item")
+        await fireEvent(listItem, "delete", 0)
+      })
+      it("the todo-item has been removed", () => {
+        const todoItem = app.shadowRoot.querySelector("todo-item")
+        expect(todoItem).not.to.exist
+      })
+    })
   })
 })
