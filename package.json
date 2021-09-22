@@ -1,36 +1,37 @@
 {
-  "name": "lit-todo-list",
-  "version": "1.0.0",
-  "description": "todo list made with lit, library to develop fast web components",
-  "main": "main.js",
-  "scripts": {
-    "build": "rollup --config",
-    "dev:build": "tsc --watch",
-    "dev:start": "es-dev-server --node-resolve --watch --port 3000",
-    "start": "npm run build && serve -l 3000",
-    "test": "jest --config"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "lit": "^2.0.0-rc.3"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.15.4",
-    "@babel/plugin-proposal-decorators": "^7.15.4",
-    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
-    "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.15.4",
-    "@babel/preset-typescript": "^7.15.0",
-    "@open-wc/testing": "^2.5.33",
-    "@rollup/plugin-commonjs": "^18.0.0",
-    "@rollup/plugin-node-resolve": "^11.2.1",
-    "babel-jest": "^27.1.0",
-    "es-dev-server": "^2.1.0",
-    "jest": "^27.1.0",
-    "rollup": "^2.44.0",
-    "serve": "^11.3.2",
-    "ts-jest": "^27.0.5",
-    "typescript": "^4.4.2"
-  }
+    "name": "lit-todo-list",
+    "version": "1.0.0",
+    "description": "todo list made with lit, library to develop fast web components",
+    "main": "main.js",
+    "scripts": {
+        "build": "rollup --config",
+        "dev": "npm run dev:build & npm run dev:start",
+        "dev:build": "tsc --watch",
+        "dev:start": "es-dev-server --node-resolve --watch --port 3000",
+        "start": "npm run build && serve -l 3000",
+        "test": "jest --config"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "lit": "^2.0.0-rc.3"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.15.4",
+        "@babel/plugin-proposal-decorators": "^7.15.4",
+        "@babel/plugin-transform-modules-commonjs": "^7.15.4",
+        "@babel/polyfill": "^7.12.1",
+        "@babel/preset-env": "^7.15.4",
+        "@babel/preset-typescript": "^7.15.0",
+        "@open-wc/testing": "^2.5.33",
+        "@rollup/plugin-commonjs": "^18.0.0",
+        "@rollup/plugin-node-resolve": "^11.2.1",
+        "babel-jest": "^27.1.0",
+        "es-dev-server": "^2.1.0",
+        "jest": "^27.1.0",
+        "rollup": "^2.44.0",
+        "serve": "^11.3.2",
+        "ts-jest": "^27.0.5",
+        "typescript": "^4.4.2"
+    }
 }

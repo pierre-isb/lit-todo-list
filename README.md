@@ -6,17 +6,11 @@
 
 ### Dev mode
 
-Compiling typescript (watch mode):
-
 ```
-npm run dev:build
+npm run dev
 ```
 
-Serve files (watch mode - need another terminal):
-
-```
-npm run dev:start
-```
+Compiling typescript (watch mode) and run the application:
 
 ### Production mode
 
