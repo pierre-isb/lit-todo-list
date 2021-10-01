@@ -15,13 +15,13 @@ export default class TodoItem extends LitComponent {
     isEdited = false
 
     deleteItem() {
-        this.$dispatch('delete', this.item.id)
+        this.$emit('delete', this.item.id)
     }
 
     editItem(event) {
         event.preventDefault()
         const { checked, id } = this.item
-        this.$dispatch('edit', {
+        this.$emit('edit', {
             id,
             text: event.target[0].value,
             checked,
