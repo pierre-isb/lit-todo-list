@@ -5,6 +5,7 @@ module.exports = {
   testMatch: ["**/__tests__/*.spec.+(ts|js)"],
   transform: {
     "^.+\\.js$": "babel-jest",
+    "^.+\\.mjs$": "babel-jest",
     "^.+\\.ts$": "ts-jest",
   },
   transformIgnorePatterns: [
@@ -13,8 +14,10 @@ module.exports = {
       "|lit-html" +
       "|lit-element" +
       "|@open-wc" +
+      "|@esm-bundle" +
+      "|@web" +
       "|chai-a11y-axe" +
       ")/)",
   ],
   setupFiles: ["<rootDir>/setup-tests"],
-}
+};
