@@ -1,4 +1,4 @@
-import { LitElement } from 'lit'
+import { LitElement } from "lit";
 
 export default class LitComponent extends LitElement {
   $emit(action: string, payload?: any) {
@@ -12,9 +12,5 @@ export default class LitComponent extends LitElement {
 
   $getMessage(event: CustomEvent) {
     return event.detail.message;
-  }
-
-  createRenderRoot() {
-    return this;
   }
 }

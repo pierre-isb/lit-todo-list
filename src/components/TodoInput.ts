@@ -15,8 +15,13 @@ export default class TodoItem extends LitComponent {
 
     render() {
         return html`<form @submit=${this.addToList}>
-            <input class="form-input" type="text" placeholder="What do I need ?" />
-        </form>`
+          <input
+            class="form-input"
+            type="text"
+            placeholder="What do I need ?"
+            aria-label="What do I need ?"
+          />
+        </form>`;
     }
 
     static styles = css`

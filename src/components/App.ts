@@ -8,7 +8,7 @@ import "./TodoInput"
 import "./TodoItem"
 
 @customElement("todo-list")
-export default class App extends LitComponent {
+export default class TodoList extends LitComponent {
   @property()
   title = "Todo list"
 
