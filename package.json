@@ -9,7 +9,8 @@
     "dev:build": "tsc --watch",
     "dev:start": "es-dev-server --node-resolve --watch --port 3000",
     "start": "npm run build && serve -l 3000",
-    "test": "jest --config"
+    "test": "jest --config",
+    "test:cypress": "npx cypress open --component"
   },
   "author": "",
   "license": "ISC",
@@ -26,14 +27,18 @@
     "@open-wc/testing": "^3.2.0",
     "@rollup/plugin-commonjs": "^18.0.0",
     "@rollup/plugin-node-resolve": "^11.2.1",
-    "@testing-library/dom": "^9.3.1",
+    "@testing-library/cypress": "^10.0.1",
+    "@testing-library/dom": "^9.3.3",
     "@testing-library/jest-dom": "^5.17.0",
     "babel-jest": "^27.1.0",
+    "cypress": "^13.2.0",
+    "cypress-ct-lit": "^0.3.3",
     "es-dev-server": "^2.1.0",
     "jest": "^27.1.0",
     "rollup": "^2.44.0",
     "serve": "^14.2.0",
     "ts-jest": "^27.0.5",
-    "typescript": "^4.4.2"
+    "typescript": "^4.4.2",
+    "vite": "^4.4.9"
   }
 }
