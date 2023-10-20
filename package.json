@@ -9,7 +9,7 @@
     "dev:build": "tsc --watch",
     "dev:start": "es-dev-server --node-resolve --watch --port 3000",
     "start": "npm run build && serve -l 3000",
-    "test": "jest --config",
+    "test": "jest",
     "test:cypress": "npx cypress open --component"
   },
   "author": "",
@@ -30,6 +30,7 @@
     "@testing-library/cypress": "^10.0.1",
     "@testing-library/dom": "^9.3.3",
     "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/user-event": "^14.5.1",
     "babel-jest": "^27.1.0",
     "cypress": "^13.2.0",
     "cypress-ct-lit": "^0.3.3",
